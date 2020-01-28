@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.4.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>br.com.ridgue2</groupId>
+    <artifactId>Site_Evento</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>Site_Evento</name>
+    <description>Site Evento</description>
+
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//passo1: criou uma database
+
+
+
+
+//importou o string boot no pom
+
+//criar pacote br.com... dentro do java
+//criou o app dentro do pacote br.com
+//colocou a anotacao @SpringBoot
+//de baixo da main do app colocou p Spring.run...
+//crio pacotes dentro do br.com
+//criou a classse controler dentro do pacote contrller.
+//fez o properties dentro do resources
+
+//Nao me lembro qnd, mas o patrick apagou umas independencias no pom, o q esta ferrarndo o sitema, pois ninguem ta conseguindo importar
+
+//Na classe controller colcou a anotacao controler e p get mapping retornando o inex
+//comecou a home no index dentro do templates
+//colocou o link de cadastro
+//criou a classe model
+//criou a interface no rwpositoroio
+//criou a classe service
+//no classes model ele criou o private com a data, nome, id, etc.
+//colocou o @EntityScan
+//colocou @Generate
+//concertaram o pom
+//estao criando as variaveis
+//arrumaram as os importes do menos o GenerationTyoe.AUTO
+//criaram as variaveis
+//arrumaram a GenereationType
+//NUNCA TIRE NADA DO POM PRA N FERRAR OS OUTROS
+//O pom tem que estra completo para poder importar todas as classes, de todos as abas
+//todos os @ teem, que ser direcionados do pom, e sempre tem que observar se o pom estar comṕleto
+//ERRO colocarm controller na classe service
+//CORRECAO no lugar do controller vc tem q colocra @Serivice
+//Criaram o Autowired no Service
+//ERRO colocaram "eventosRepository" dentro do servoice CORRECAO onde era pra ter "eventosService"
+//apagaram o Autowired
+//ARRUMARAM o @controller e colocaram o @service
+//No terminal colocaram o Show databases
+
+
+//nao sei qnd, maas o cintrutor com get and seter foi criado
+
+
+//criaram o autowired novamente.
+//colocaram de baixo do autowired "private eventosRepository repository"
+//de baixo colocaram "poublic eventosModel cadastrarEvento(eventosModel evento)
+//retornou o repository.save.blablabla
+//rodaram o codigo, mas n dei certo
+//foram no index e colocaram mais um pouco de coisas
+//EU ACHO Q E ERRO no index de baixo do input colocaram date
+//na classe controller colocaram o @postMapping
+//dps colocaram public String cadastrarEvento(sistemaeventos)
+//colocar variavel que nao existe
+// nao criar o private service na controller
+//Nao vai criar a tabela sem rodar o codigo
+//na classe controller colocaram o autowired
+//em baixo colocaram
+//Mudaram o pom, o q na minha opiniao n deu em nada.
+//atualizaram o index
+//no autowired, da classe controller, continuaram o q n tinham terminado, q era:
+//"orivate eventosService service
+//muduram o getmappig do cotroller
+//public String mostrarHome(eventoModel evento) return index
+//tiraram o return e colocaram "service.cadastrarEvento
+//baguncaram tudo, e ficou assim:
+//@GetMapping public String mostrsrHome(){return "index";}
+//Fizeram o postMapping
+//MUDARAM A mErDA DO POM DNV SEM A MINIMA NECESSIDADE PRA Q MANO?
+//criaram outro database
+//Apagaram e fizeram
+//de baixo do service.cadastro... no controller, ficou:
+//
+//
+//APRENDIZADOS:
+//
+//TESTAR, TEM Q TESTAR TUDO
+//o importe é automatico n se preocupe em escreve-lo
+//comecou algo, termina isso e dps testa
+//SE pergunta pq vc tava fazendo isso.
+//Se for copiar algo, saiba o pq e altere a logica da copia pro seu codigo.
+//nao fique mexendo muito no pom
+//temos que refatorizar o codigo (deixar-lo bonito)
